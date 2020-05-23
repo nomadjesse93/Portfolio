@@ -1,0 +1,10 @@
+.JumboTron{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    justify-self: center;
+
+}
+
+.modal{ display:block; }
