@@ -6,12 +6,10 @@ name: Node.js CI
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     strategy:
       matrix:
@@ -23,12 +21,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd ../../var/www
-      - run: sudo rm -rf Portfolio
-      - run: sudo git clone https://github.com/nomadjesse93/Portfolio.git
       - run: cd Portfolio/client
       - run: npm install
       - run: npm run build
       - run: cd ..
-      - run: npm ci
+      - run: npm i
       - run: npm run start
