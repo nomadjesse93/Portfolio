@@ -22,11 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: rm -rf public
-      - run: cd client 
+      - run: cd client && pwd
       - run: pwd
-      - run: npm i
-      - run: npm run build
-      - run: cd ..
       - run: npm i
       - run: npm run --silent start
 
