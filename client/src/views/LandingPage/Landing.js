@@ -26,7 +26,7 @@ render(){
         <div className='container-fluid'>
             <Jumbotron className={styles.JumboTron}>
 
-                    <h1 id='name' className="display-3">Jesse Sanderson</h1>
+                    <h1 id='name' className="display-3">Jesse Idiot</h1>
                     <p className="lead">Web Developer, Programmer, Tech Enthusiast</p>
                     <p className="lead">
                     <Modal setShow={this.setShow} show={this.state.showModal}/>
